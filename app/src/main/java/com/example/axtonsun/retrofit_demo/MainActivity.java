@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String API_KEY = "c0c0469b2c8ae6e5c74eefd9ea7374e3";
 
     public TextView resultview;
-    public  EditText editText;
+    public EditText editText;
     public Button btn1,btn2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .addConverterFactory(GsonConverterFactory.create())//解析方法
                 .baseUrl(BASE_URL)//主机地址
                 .build();
-
 
         WeatherService service = retrofit.create(WeatherService.class);
         Call<WeatherResult> call = service.WeatherGet(API_KEY,"重庆");
@@ -105,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         PhoneService service = retrofit.create(PhoneService.class);
         Call<PhoneResult> call = service.getResult(API_KEY, editText.getText().toString());
 
-                call.enqueue(new Callback<PhoneResult>() {
+        call.enqueue(new Callback<PhoneResult>() {
             @Override
             public void onResponse(Call<PhoneResult> call, Response<PhoneResult> response) {
                 //4.处理结果

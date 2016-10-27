@@ -35,13 +35,6 @@
             android:textAllCaps="false"
             android:text="Query"/>
 
-        <Button
-            android:id="@+id/query_rxjava_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAllCaps="false"
-            android:text="RxJava"/>
 
         <Button
             android:id="@+id/weather"
@@ -49,12 +42,5 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="天气"/>
-
-        <Button
-            android:id="@+id/download"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="下载"/>
     </LinearLayout>
 </RelativeLayout>
